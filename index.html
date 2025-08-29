@@ -1,17 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Galeria de Vídeos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fafafa;
+      margin: 0;
+      padding: 20px;
+    }
+    h1, h2 { color: #333 }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .img-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+    .video-thumb {
+      width: 100%;
+      border-radius: 8px;
+      border: 2px solid #ddd;
+      transition: transform 0.2s;
+    }
+    .video-thumb:hover {
+      transform: scale(1.05);
+      border-color: #007bff;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h2> Melhores vídeos da Luisa Alvarenga</h2>
-        <p>#luisaalvarenga </p>
-    </header>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/TZh-mgp9tM8?si=RluCvT5L6eB7UXSL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+  <h1>Galeria de Vídeos</h1>
+  <!-- 2 vídeos com iframe -->
+  <div class="video-grid">
+    <iframe width="100%" height="315"
+      src="https://www.youtube.com/embed/0ruFMESU99Y"
+      title="Vídeo 1" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+    <iframe width="100%" height="315"
+      src="https://www.youtube.com/embed/mOoz3COB4Zk"
+      title="Vídeo 2" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+  </div>
 
-    
+  <h2>Mais vídeos</h2>
+  <!-- 5 vídeos como imagens clicáveis -->
+  <div class="img-grid">
+    <a href="https://youtu.be/98cbQS0WU7k?si=LEyYWiTsmRp_HW6i" target="_blank">
+      <img class="video-thumb" src="https://img.youtube.com/vi/98cbQS0WU7k/hqdefault.jpg" alt="Vídeo 3">
+    </a>
+    <a href="https://youtu.be/xKHBSMOysaU?si=xz2Ipc7-ryAcC_LH" target="_blank">
+      <img class="video-thumb" src="https://img.youtube.com/vi/xKHBSMOysaU/hqdefault.jpg" alt="Vídeo 4">
+    </a>
+    <a href="https://youtu.be/5CVEX_GDasw?si=mDjOZnXJ_Lde_HzF" target="_blank">
+      <img class="video-thumb" src="https://img.youtube.com/vi/5CVEX_GDasw/hqdefault.jpg" alt="Vídeo 5">
+    </a>
+    <a href="https://youtu.be/OZGHJizHVs8?si=zBU98EJjwEE_1xt5" target="_blank">
+      <img class="video-thumb" src="https://img.youtube.com/vi/OZGHJizHVs8/hqdefault.jpg" alt="Vídeo 6">
+    </a>
+    <a href="https://youtu.be/8oYmh5Z4vZ0?si=r6RVvyoD9lGsADDI" target="_blank">
+      <img class="video-thumb" src="https://img.youtube.com/vi/8oYmh5Z4vZ0/hqdefault.jpg" alt="Vídeo 7">
+    </a>
+  </div>
 </body>
 </html>
